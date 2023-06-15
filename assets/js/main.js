@@ -293,3 +293,31 @@
   new PureCounter();
 
 })();
+/**
+ * Email Form
+ */
+const contactForm = document.getElementById('contact-form'),
+      contactMessage = document.getElementById('contact-message'),
+      errorElement = document.getElementById('error'),
+      sentElement = document.getElementById('sent');
+
+const sendEmail = (e) =>{
+  e.preventDefault()
+  //serviceID - templateID - #form - public key
+ emailjs.sendForm('service_onmoutl', 'template_hohrtvb', '#contact-form', 'liHvJrQ_IbUwfchVR')
+ .then(() =>{
+   // Show success message and refresh the page
+   sentElement.hidden = false;
+   errorElement.hidden = true;
+   setTimeout(() => {
+     window.location.reload();
+   }, 1000); // Refresh after 3 seconds
+ })
+ .catch(() => {
+   // Show error message
+   sentElement.hidden = true;
+   errorElement.hidden = false;
+ });
+}
+
+contactForm.addEventListener('submit', sendEmail)
