@@ -316,7 +316,7 @@ const sendEmail = (e) => {
       errorElement.hidden = true;
       setTimeout(() => {
         window.location.reload();
-      }, 1000); // Refresh after 3 seconds
+      }, 500); // Refresh after 3 seconds
     })
     .catch(() => {
       // Show error message with Swal
