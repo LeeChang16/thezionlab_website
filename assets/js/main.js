@@ -314,9 +314,9 @@ const sendEmail = (e) => {
       });
       sentElement.hidden = false;
       errorElement.hidden = true;
-      setTimeout(() => {
-        window.location.reload();
-      }, 500); // Refresh after 3 seconds
+      // setTimeout(() => {
+      //   window.location.reload();
+      // }, 500); // Refresh after 3 seconds
     })
     .catch(() => {
       // Show error message with Swal
@@ -330,4 +330,5 @@ const sendEmail = (e) => {
     });
 }
 
-contactForm.addEventListener('submit', sendEmail);
+ contactForm.addEventListener('submit', sendEmail);
+
