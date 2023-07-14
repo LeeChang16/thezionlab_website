@@ -792,13 +792,13 @@
 emailjs.send('service_izgcxrb', 'template_tknm3sk', templateParams, 'hsxrlIxA4TgegtC3Y')
     .then(function(response) {
             swal({
-              title: "Sent Success!",
+              title: "Sent Successfully!",
         icon: "success",
       });
        console.log('SUCCESS!', response.status, response.text);
     }, function(error) {
       swal({
-        title: "Sent Failure",
+        title: "Send Failed",
         icon: "error",
       });
        console.log('FAILED...', error);
