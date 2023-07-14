@@ -296,39 +296,63 @@
 /**
  * Email Form
  */
-const contactForm = document.getElementById('contact-form');
-const contactMessage = document.getElementById('contact-message');
-const errorElement = document.getElementById('error');
-const sentElement = document.getElementById('sent');
+// const contactForm = document.getElementById('contact-form');
+// const contactMessage = document.getElementById('contact-message');
+// const errorElement = document.getElementById('error');
+// const sentElement = document.getElementById('sent');
 
-const sendEmail = (e) => {
-  e.preventDefault();
+// const sendEmail = (e) => {
+//   e.preventDefault();
 
-  emailjs.sendForm('service_onmoutl', 'template_hohrtvb', '#contact-form', 'liHvJrQ_IbUwfchVR')
-    .then(() => {
-      // Show success message with Swal and refresh the page
-      Swal.fire({
-        icon: 'success',
-        title: 'Success',
-        text: 'Your message has been sent. Thank you!',
-      });
-      sentElement.hidden = false;
-      errorElement.hidden = true;
-      // setTimeout(() => {
-      //   window.location.reload();
-      // }, 500); // Refresh after 3 seconds
-    })
-    .catch(() => {
-      // Show error message with Swal
-      Swal.fire({
-        icon: 'error',
-        title: 'Error',
-        text: 'Your message has not been sent. Sorry!',
-      });
-      sentElement.hidden = true;
-      errorElement.hidden = false;
-    });
-}
+//   emailjs.sendForm('service_onmoutl', 'template_hohrtvb', '#contact-form', 'liHvJrQ_IbUwfchVR')
+//     .then(() => {
+//       // Show success message with Swal and refresh the page
+//       Swal.fire({
+//         icon: 'success',
+//         title: 'Success',
+//         text: 'Your message has been sent. Thank you!',
+//       });
+//       sentElement.hidden = false;
+//       errorElement.hidden = true;
+//       // setTimeout(() => {
+//       //   window.location.reload();
+//       // }, 500); // Refresh after 3 seconds
+//     })
+//     .catch(() => {
+//       // Show error message with Swal
+//       Swal.fire({
+//         icon: 'error',
+//         title: 'Error',
+//         text: 'Your message has not been sent. Sorry!',
+//       });
+//       sentElement.hidden = true;
+//       errorElement.hidden = false;
+//     });
+// }
 
- contactForm.addEventListener('submit', sendEmail);
+//  contactForm.addEventListener('submit', sendEmail);
 
+//  function SendEmail(){
+
+//       console.log("button clicked!");
+
+
+//       Email.send({
+//         Host : "smtp.elasticemail.com",
+//         Username : "zionlabsmtpserver@gmail.com",
+//         Password : "F89221A8D4573AD8D73CA993B1AFA76ED7EB",
+//         To : 'testsendmsg420@gmail.com',
+//         From : document.getElementById('contact-email').value,
+//         Subject : document.getElementById('contact-subject').value,
+//         Body : document.getElementById('contact-message').value
+//           }).then(() =>{
+//             swal({
+//               title: "Message Sent!",
+//               icon: "success",
+//             });
+
+
+//           }
+// );}
+
+  

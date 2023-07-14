@@ -26,6 +26,19 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
+  <script src="https://smtpjs.com/v3/smtp.js">
+  </script>
+
+
+  <!--fOR SENDING EMAIL USING EMAILJS-->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+      (function() {
+          // https://dashboard.emailjs.com/admin/account
+          emailjs.init('hsxrlIxA4TgegtC3Y');
+      })();
+  </script>
+
 </head>
 
 <body>
@@ -636,7 +649,7 @@
           </div>
 
           <div class="col-lg-6">
-            <form class="email-form" id="contact-form">
+            <form class="email-form" id = "contact-form" > <!---->
               <div class="row gy-4">
 
                 <div class="col-md-6">
@@ -657,9 +670,7 @@
 
                 <div class="col-md-12 text-center">
                   
-
-
-                  <button type="submit" id="okButton">Send Message</button>
+                  <button type="submit"   >Send Message</button> <!--id="okButton"  onclick="SendEmail()" -->
                 </div>
 
               </div>
@@ -761,6 +772,40 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+ <!--EMAIL JS function -->
+ <!--quota = 200 mails per month. Will refresh every 14th day of the month-->
+
+<script type="text/javascript">
+  window.onload = function() {
+      document.getElementById('contact-form').addEventListener('submit', function(event) {
+          event.preventDefault();
+
+          var templateParams = {
+    name: document.getElementById('contact-name').value,
+    email: document.getElementById('contact-email').value,
+    subject: document.getElementById('contact-subject').value,
+    message: document.getElementById('contact-message').value
+};
+ 
+emailjs.send('service_izgcxrb', 'template_tknm3sk', templateParams, 'hsxrlIxA4TgegtC3Y')
+    .then(function(response) {
+            swal({
+              title: "Sent Success!",
+        icon: "success",
+      });
+       console.log('SUCCESS!', response.status, response.text);
+    }, function(error) {
+      swal({
+        title: "Sent Failure",
+        icon: "error",
+      });
+       console.log('FAILED...', error);
+    });
+      });
+  }
+</script>
 
 </body>
 
