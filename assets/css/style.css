@@ -897,37 +897,37 @@ section {
 }
 
 .services .service-box.green {
-  border-bottom: 3px solid #08da4e;
+  border-bottom: 3px solid #c5d308;
 }
 
 .services .service-box.green .icon {
-  color: #08da4e;
-  background: #cffddf;
+  color: #c5d308;
+  background: #fdfdf8;
 }
 
 .services .service-box.green .read-more {
-  color: #08da4e;
+  color: #c5d308;
 }
 
 .services .service-box.green:hover {
-  background: #08da4e;
+  background: #c5d308;
 }
 
 .services .service-box.red {
-  border-bottom: 3px solid #e9222c;
+  border-bottom: 3px solid #f14084;
 }
 
 .services .service-box.red .icon {
-  color: #e9222c;
+  color: #f14084;
   background: #fef7f8;
 }
 
 .services .service-box.red .read-more {
-  color: #e9222c;
+  color: #f14084;
 }
 
 .services .service-box.red:hover {
-  background: #e9222c;
+  background: #f14084;
 }
 
 .services .service-box.purple {
