@@ -897,20 +897,20 @@ section {
 }
 
 .services .service-box.green {
-  border-bottom: 3px solid #c5d308;
+  border-bottom: 3px solid #babdb9;
 }
 
 .services .service-box.green .icon {
-  color: #c5d308;
+  color: #babdb9;
   background: #fdfdf8;
 }
 
 .services .service-box.green .read-more {
-  color: #c5d308;
+  color: #babdb9;
 }
 
 .services .service-box.green:hover {
-  background: #c5d308;
+  background: #babdb9;
 }
 
 .services .service-box.red {
