@@ -915,20 +915,20 @@ section {
 }
 
 .services .service-box.red {
-  border-bottom: 3px solid #f14084;
+  border-bottom: 3px solid #008080;
 }
 
 .services .service-box.red .icon {
-  color: #f14084;
-  background: #fef7f8;
+  color: #008080;
+  background: #fdfdf8;
 }
 
 .services .service-box.red .read-more {
-  color: #f14084;
+  color: #008080;
 }
 
 .services .service-box.red:hover {
-  background: #f14084;
+  background: #008080;
 }
 
 .services .service-box.purple {
